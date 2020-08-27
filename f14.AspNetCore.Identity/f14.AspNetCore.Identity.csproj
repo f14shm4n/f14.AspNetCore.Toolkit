@@ -8,8 +8,8 @@
     <Company>f14shm4n</Company>
     <Copyright>f14shm4n</Copyright>
     <Description>Provides a basic classes and iterfaces for AspNetCore.Identity.</Description>    
-    <PackageProjectUrl>https://github.com/f14shm4n/f14.Toolkit/tree/master/f14.AspNetCore.Identity</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/f14shm4n/f14.Toolkit</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/f14shm4n/f14.AspNetCore.Toolkit/tree/master/f14.AspNetCore.Identity</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/f14shm4n/f14.AspNetCore.Toolkit</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>NetStandard;AspNetCore;Identity</PackageTags>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>

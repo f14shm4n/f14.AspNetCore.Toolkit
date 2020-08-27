@@ -7,8 +7,8 @@
     <Company>f14shm4n</Company>
     <Copyright>f14shm4n</Copyright>
     <Description>Provides an extensions for Microsoft.Azure.Cosmos.</Description>
-    <PackageProjectUrl>https://github.com/f14shm4n/f14.Toolkit/tree/master/f14.Azure.CosmosDB</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/f14shm4n/f14.Toolkit</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/f14shm4n/f14.AspNetCore.Toolkit/tree/master/f14.Azure.CosmosDB</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/f14shm4n/f14.AspNetCore.Toolkit</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>NetStandard;Cosmos;CosmosDb;Azure</PackageTags>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>

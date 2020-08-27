@@ -8,8 +8,8 @@
     <Company>f14shm4n</Company>
     <Copyright>f14shm4n</Copyright>
     <Description>Provides useful extensions for Microsoft.EntityFrameworkCore, like repositories, models, and others stuff.</Description>
-    <PackageProjectUrl>https://github.com/f14shm4n/f14.Toolkit/tree/master/f14.EntityFrameworkCore</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/f14shm4n/f14.Toolkit</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/f14shm4n/f14.AspNetCore.Toolkit/tree/master/f14.EntityFrameworkCore</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/f14shm4n/f14.AspNetCore.Toolkit</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>NetStandard;EntityFrameworkCore</PackageTags>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>

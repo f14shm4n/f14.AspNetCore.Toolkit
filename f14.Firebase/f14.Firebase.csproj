@@ -8,8 +8,8 @@
     <Company>f14shm4n</Company>
     <Copyright>f14shm4n</Copyright>
     <Description>Provides useful extensions for working with Firebase, Firestore.</Description>
-    <PackageProjectUrl>https://github.com/f14shm4n/f14.Toolkit/tree/master/f14.Firebase</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/f14shm4n/f14.Toolkit</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/f14shm4n/f14.AspNetCore.Toolkit/tree/master/f14.Firebase</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/f14shm4n/f14.AspNetCore.Toolkit</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>NetStandard;Firebase;Firestore</PackageTags>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -23,6 +23,7 @@
   </PropertyGroup>
 
   <ItemGroup>    
+    <PackageReference Include="f14.Common" Version="2.1.6.5" />    
     <PackageReference Include="Google.Cloud.Firestore" Version="2.0.0" />
     <PackageReference Include="System.Text.Json" Version="4.7.2" />
   </ItemGroup>

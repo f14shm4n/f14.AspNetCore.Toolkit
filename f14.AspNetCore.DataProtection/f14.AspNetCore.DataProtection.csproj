@@ -8,8 +8,8 @@
     <Company>f14shm4n</Company>
     <Copyright>f14shm4n</Copyright>
     <Description>Provides useful extensions for AspNetCore.DataProtection.</Description>
-    <PackageProjectUrl>https://github.com/f14shm4n/f14.Toolkit/tree/master/f14.AspNetCore.DataProtection</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/f14shm4n/f14.Toolkit</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/f14shm4n/f14.AspNetCore.Toolkit/tree/master/f14.AspNetCore.DataProtection</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/f14shm4n/f14.AspNetCore.Toolkit</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>NetStandard;AspNetCore;DataProtection</PackageTags>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>

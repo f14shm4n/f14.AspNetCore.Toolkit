@@ -8,8 +8,8 @@
     <Company>f14shm4n</Company>
     <Copyright>f14shm4n</Copyright>
     <Description>Provides useful basic models and interfaces.</Description>
-    <PackageProjectUrl>https://github.com/f14shm4n/f14.Toolkit/tree/master/f14.Data</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/f14shm4n/f14.Toolkit</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/f14shm4n/f14.AspNetCore.Toolkit/tree/master/f14.Data</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/f14shm4n/f14.AspNetCore.Toolkit</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>NetStandard;Data;Model</PackageTags>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
