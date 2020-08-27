@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>f14.Azure.CosmosDB</AssemblyName>
+    <Authors>f14shm4n</Authors>
+    <Company>f14shm4n</Company>
+    <Copyright>f14shm4n</Copyright>
+    <Description>Provides an extensions for Microsoft.Azure.Cosmos.</Description>
+    <PackageProjectUrl>https://github.com/f14shm4n/f14.Toolkit/tree/master/f14.Azure.CosmosDB</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/f14shm4n/f14.Toolkit</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>NetStandard;Cosmos;CosmosDb;Azure</PackageTags>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <LangVersion>8.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <Version>1.0.1</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\$(Platform)\f14.Azure.CosmosDB.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.8.0" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="licenses\LICENSE.txt" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\f14.Data\f14.Data.csproj" />
+  </ItemGroup>
+
+</Project>

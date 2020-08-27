@@ -1,0 +1,13 @@
+﻿@model ViewRenderSample.Models.TestViewModel
+@{
+}
+<div class="custom-test-container">
+    <h1>@Model.Title</h1>
+    <p>
+        Type: @ViewData["Type"]
+    </p>
+    <p>
+        <a href="@Url.Action("TestAction", "Home", new { id = 1, name = "UrlHelper" }))">Test Action (UrlHelper)</a>
+        <a asp-action="TestAction" asp-controller="Home" asp-route-id="2" asp-route-name="TagHelper">Test Action (TagHelper)</a>
+    </p>
+</div>

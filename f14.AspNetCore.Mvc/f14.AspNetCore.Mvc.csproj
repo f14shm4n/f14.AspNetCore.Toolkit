@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>f14.AspNetCore.Mvc</AssemblyName>
+    <RootNamespace>f14.AspNetCore.Mvc</RootNamespace>
+    <Authors>f14shm4n</Authors>
+    <Company>f14shm4n</Company>
+    <Copyright>f14shm4n</Copyright>
+    <Description>Provides common classes and utilities for AspNetCore.Mvc.</Description>    
+    <PackageProjectUrl>https://github.com/f14shm4n/f14.Toolkit/tree/master/f14.AspNetCore.Mvc</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/f14shm4n/f14.Toolkit</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>AspNetCore;MVC</PackageTags>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>0.0.1</Version>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\$(Platform)\f14.AspNetCore.Mvc.xml</DocumentationFile>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\f14.AspNetCore\f14.AspNetCore.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="licenses\LICENSE.txt" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
+  </ItemGroup>
+</Project>

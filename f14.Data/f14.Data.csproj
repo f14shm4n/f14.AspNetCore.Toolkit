@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>f14.Data</AssemblyName>
+    <RootNamespace>f14.Data</RootNamespace>
+    <Authors>f14shm4n</Authors>
+    <Company>f14shm4n</Company>
+    <Copyright>f14shm4n</Copyright>
+    <Description>Provides useful basic models and interfaces.</Description>
+    <PackageProjectUrl>https://github.com/f14shm4n/f14.Toolkit/tree/master/f14.Data</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/f14shm4n/f14.Toolkit</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>NetStandard;Data;Model</PackageTags>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <LangVersion>8.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <Version>1.0.2</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\$(Platform)\f14.Data.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="licenses\LICENSE.txt" Pack="true" PackagePath="" />
+  </ItemGroup>
+</Project>

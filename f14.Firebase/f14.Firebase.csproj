@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>f14.Firebase</AssemblyName>
+    <RootNamespace>f14.Firebase</RootNamespace>
+    <Authors>f14shm4n</Authors>
+    <Company>f14shm4n</Company>
+    <Copyright>f14shm4n</Copyright>
+    <Description>Provides useful extensions for working with Firebase, Firestore.</Description>
+    <PackageProjectUrl>https://github.com/f14shm4n/f14.Toolkit/tree/master/f14.Firebase</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/f14shm4n/f14.Toolkit</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>NetStandard;Firebase;Firestore</PackageTags>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <LangVersion>8.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <Version>1.0.3</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\$(Platform)\f14.Firebase.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>    
+    <PackageReference Include="Google.Cloud.Firestore" Version="2.0.0" />
+    <PackageReference Include="System.Text.Json" Version="4.7.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\f14.Data\f14.Data.csproj" />
+  </ItemGroup>
+
+</Project>
