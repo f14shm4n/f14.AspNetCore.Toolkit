@@ -11,13 +11,19 @@ namespace f14.AspNetCore.EntityFrameworkCore.Repositories
     public interface IRepository<T> where T : class
     {
         /// <summary>
+        /// Retrieves all entities in the related table.
+        /// </summary>
+        /// <returns>A set of entities or null.</returns>
+        IEnumerable<T>? GetAll();
+
+        /// <summary>
         /// Searches for an entities using specified filter.
         /// </summary>
         /// <param name="filter">The entity filter.</param>
         /// <param name="skip">The number of an entities that need to skip in filterd collection.</param>
         /// <param name="take">The number of an entities that need to take from the filtered collection.</param>
-        /// <returns>A list of entities or null.</returns>
-        List<T>? GetAll(Expression<Func<T, bool>> filter, int skip, int take);
+        /// <returns>A set of entities or null.</returns>
+        IEnumerable<T>? GetAll(Expression<Func<T, bool>> filter, int skip, int take);
 
         /// <summary>
         /// Searches the single object using specified selector.

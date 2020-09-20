@@ -9,7 +9,7 @@ namespace f14.AspNetCore.EntityFrameworkCore.Repositories
     /// </summary>
     /// <typeparam name="T">Type of entity.</typeparam>
     /// <typeparam name="TKey">Type of entity key.</typeparam>
-    public interface IAsyncEntityRepository<T, TKey> : IRepository<T>
+    public interface IAsyncEntityRepository<T, TKey> : IAsyncRepository<T>
         where T : class, IEntity<TKey>
     {
         /// <summary>

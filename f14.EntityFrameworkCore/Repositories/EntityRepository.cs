@@ -24,10 +24,7 @@ namespace f14.AspNetCore.EntityFrameworkCore.Repositories
         #region IEntityRepository
 
         ///<inheritdoc cref="IEntityRepository{T, TKey}.Get(TKey)"/>
-        public T? Get(TKey id)
-        {
-            return Get(x => x.Id!.Equals(id));
-        }
+        public T? Get(TKey id) => Get(x => x.Id!.Equals(id));
 
         #endregion
 

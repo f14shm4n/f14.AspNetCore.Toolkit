@@ -40,24 +40,15 @@ namespace f14.AspNetCore.EntityFrameworkCore.Repositories
         ///<inheritdoc cref="IRepository{T}.Get(Expression{Func{T, bool}})"/>
         public virtual T Get(Expression<Func<T, bool>> selector) => Table.FirstOrDefault(selector);
 
+        ///<inheritdoc cref="IRepository{T}.GetAll()"/>
+        public IEnumerable<T>? GetAll() => Table.ToList();
+
         ///<inheritdoc cref="IRepository{T}.GetAll(Expression{Func{T, bool}}, int, int)"/>
-        public List<T>? GetAll(Expression<Func<T, bool>> filter, int skip, int take) => Table.Where(filter).Skip(skip).Take(take).ToList();
+        public IEnumerable<T>? GetAll(Expression<Func<T, bool>> filter, int skip, int take) => Table.Where(filter).Skip(skip).Take(take).ToList();
 
         #endregion
 
         #region IAsyncRepository
-
-        ///<inheritdoc/>
-        public async Task<List<T>?> GetAllAsync(Expression<Func<T, bool>> filter, int skip, int take, CancellationToken cancellationToken = default)
-        {
-            return await Table.Where(filter).Skip(skip).Take(take).ToListAsync(cancellationToken).ConfigureAwait(false);
-        }
-
-        ///<inheritdoc/>
-        public async Task<T?> GetAsync(Expression<Func<T, bool>> selector, CancellationToken cancellationToken = default)
-        {
-            return await Table.SingleOrDefaultAsync(cancellationToken).ConfigureAwait(false);
-        }
 
         ///<inheritdoc/>
         public async Task<int> CountAsync(CancellationToken cancellationToken = default)
@@ -69,6 +60,24 @@ namespace f14.AspNetCore.EntityFrameworkCore.Repositories
         public async Task<int> CountAsync(Expression<Func<T, bool>> filter, CancellationToken cancellationToken = default)
         {
             return await Table.CountAsync(filter, cancellationToken).ConfigureAwait(false);
+        }
+
+        ///<inheritdoc/>
+        public async Task<T?> GetAsync(Expression<Func<T, bool>> selector, CancellationToken cancellationToken = default)
+        {
+            return await Table.SingleOrDefaultAsync(cancellationToken).ConfigureAwait(false);
+        }
+
+        ///<inheritdoc/>
+        public async Task<IEnumerable<T>?> GetAllAsync()
+        {
+            return await Table.ToListAsync().ConfigureAwait(false);
+        }
+
+        ///<inheritdoc/>
+        public async Task<IEnumerable<T>?> GetAllAsync(Expression<Func<T, bool>> filter, int skip, int take, CancellationToken cancellationToken = default)
+        {
+            return await Table.Where(filter).Skip(skip).Take(take).ToListAsync(cancellationToken).ConfigureAwait(false);
         }
 
         #endregion

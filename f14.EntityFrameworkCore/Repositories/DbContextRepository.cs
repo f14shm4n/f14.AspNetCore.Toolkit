@@ -1,10 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace f14.AspNetCore.EntityFrameworkCore.Repositories
 {
     ///<inheritdoc cref="IDbContextRepository{T, TDbContext}"/>.
-    public abstract class DbContextRepository<T, TDbContext> : Repository<T>, IDbContextRepository<T, TDbContext>, IManagementRepository<T>
+    public abstract class DbContextRepository<T, TDbContext> : Repository<T>, IDbContextRepository<T, TDbContext>
         where T : class
         where TDbContext : DbContext
     {
@@ -29,6 +31,11 @@ namespace f14.AspNetCore.EntityFrameworkCore.Repositories
         ///<inheritdoc/>
         public virtual int Add(T o)
         {
+            if (o == null)
+            {
+                throw new ArgumentNullException(nameof(o));
+            }
+
             Context.Add(o);
             return Context.SaveChanges();
         }
@@ -36,6 +43,15 @@ namespace f14.AspNetCore.EntityFrameworkCore.Repositories
         ///<inheritdoc/>
         public virtual int AddRange(IEnumerable<T> list)
         {
+            if (list == null)
+            {
+                throw new ArgumentNullException(nameof(list));
+            }
+            if (list.Any() == false)
+            {
+                return 0;
+            }
+
             Context.AddRange(list);
             return Context.SaveChanges();
         }
@@ -43,6 +59,11 @@ namespace f14.AspNetCore.EntityFrameworkCore.Repositories
         ///<inheritdoc/>
         public virtual int Delete(T o)
         {
+            if (o == null)
+            {
+                throw new ArgumentNullException(nameof(o));
+            }
+
             Context.Remove(o);
             return Context.SaveChanges();
         }
@@ -50,6 +71,15 @@ namespace f14.AspNetCore.EntityFrameworkCore.Repositories
         ///<inheritdoc/>
         public virtual int DeleteRange(IEnumerable<T> list)
         {
+            if (list == null)
+            {
+                throw new ArgumentNullException(nameof(list));
+            }
+            if (list.Any() == false)
+            {
+                return 0;
+            }
+
             Context.RemoveRange(list);
             return Context.SaveChanges();
         }

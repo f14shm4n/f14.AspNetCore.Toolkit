@@ -7,7 +7,7 @@ namespace f14.AspNetCore.EntityFrameworkCore.Repositories
     /// </summary>
     /// <typeparam name="T">Type of entities.</typeparam>
     /// <typeparam name="TDbContext">Type of <see cref="DbContext"/>.</typeparam>
-    public interface IDbContextRepository<T, TDbContext> : IRepository<T>
+    public interface IDbContextRepository<T, TDbContext> : IRepository<T>, IAsyncRepository<T>, IManagementRepository<T>
         where T : class
         where TDbContext : DbContext
     {
