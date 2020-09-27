@@ -9,11 +9,9 @@ namespace f14.AspNetCore.Identity
     /// <summary>
     /// Provides a role creating\updating method for identity roles.
     /// </summary>
-    /// <typeparam name="TRoleManager">Type of the role manager.</typeparam>
     /// <typeparam name="TRole">Type of the identity role object.</typeparam>
     /// <typeparam name="TRoleInfo">Type of the role info object.</typeparam>
-    public class RoleUpdater<TRoleManager, TRole, TRoleInfo> : IdentityUpdater
-        where TRoleManager : RoleManager<TRole>
+    public class RoleUpdater<TRole, TRoleInfo> : IdentityUpdater
         where TRole : class
         where TRoleInfo : RoleInfo
     {
@@ -24,7 +22,7 @@ namespace f14.AspNetCore.Identity
         /// <param name="roles">The role collection that to need to be update in database.</param>
         /// <param name="roleFactory">The role factory which uses to create role object that will be inserted to the database.</param>
         /// <returns>An asynchronous operation.</returns>
-        public virtual async Task UpdateAsync(TRoleManager roleManager, IEnumerable<TRoleInfo> roles, Func<TRoleInfo, TRole> roleFactory)
+        public virtual async Task UpdateAsync(RoleManager<TRole> roleManager, IEnumerable<TRoleInfo> roles, Func<TRoleInfo, TRole> roleFactory)
         {
             IdentityResult result;
             foreach (var roleInfo in roles)
