@@ -25,7 +25,7 @@
   <ItemGroup>    
     <PackageReference Include="f14.Common" Version="2.1.6.5" />    
     <PackageReference Include="Google.Cloud.Firestore" Version="2.0.0" />
-    <PackageReference Include="System.Text.Json" Version="8.0.4" />
+    <PackageReference Include="System.Text.Json" Version="8.0.5" />
   </ItemGroup>
 
   <ItemGroup>
